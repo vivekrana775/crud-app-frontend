@@ -179,7 +179,7 @@ const Home = (props: Props) => {
               },
             }}
           >
-            <Listing userListings={userListings} />
+            <Listing userListings={userListings} setRender={setRender} />
           </Box>
         </Box>
       </Box>

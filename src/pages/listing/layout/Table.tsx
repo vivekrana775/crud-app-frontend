@@ -18,6 +18,7 @@ interface ColumnGroupingTableProps {
   handleRefreshData?: any;
   selectedRows?: any;
   setSelectedRows?: any;
+  setRender?: any;
   handleSelectedMenu?: (props: any) => void;
   activeSelectedMenu?: boolean;
 }
@@ -28,6 +29,7 @@ const LayoutTable: React.FC<ColumnGroupingTableProps> = ({
   head,
   loading,
   handleRefreshData,
+  setRender,
 }) => {
   return (
     <Paper
@@ -224,6 +226,7 @@ const LayoutTable: React.FC<ColumnGroupingTableProps> = ({
                         key={row?.id}
                         row={row}
                         handleRefreshData={handleRefreshData}
+                        setRender={setRender}
                       />
                       {/* <Box sx={{width:"100%",height:"1px",borderBottom:"1px solid rgba(255, 255, 255, 0.06)"}}></Box> */}
                     </>

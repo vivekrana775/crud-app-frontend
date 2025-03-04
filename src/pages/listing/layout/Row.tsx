@@ -16,10 +16,15 @@ import AddListPopup from "../../../components/AddList";
 
 interface TableRowProps {
   row: any;
+  setRender: any;
   handleRefreshData: () => void;
 }
 
-const Row: React.FC<TableRowProps> = ({ row, handleRefreshData }) => {
+const Row: React.FC<TableRowProps> = ({
+  row,
+  handleRefreshData,
+  setRender,
+}) => {
   const navigate = useNavigate();
   const [isActiveListingViewDialog, setIsActiveListingViewDialog] =
     useState(false);
@@ -30,9 +35,15 @@ const Row: React.FC<TableRowProps> = ({ row, handleRefreshData }) => {
   const handleDeleteListing = async (e: React.MouseEvent) => {
     e.stopPropagation();
     try {
-      await deleteListById({ listId: row.id });
-      toastSuccess("Deleted Successfully");
-      handleRefreshData();
+      deleteListById({ listId: row.id })
+        .then(() => {
+          setRender((prev) => !prev);
+          toastSuccess("Deleted Successfully");
+        })
+        .catch((err) => {
+          console.log("err", err);
+          toastError("Failed", "Something went wrong while deleting.");
+        });
     } catch (error) {
       console.error("Delete Error:", error);
       toastError("Something went wrong while deleting.");

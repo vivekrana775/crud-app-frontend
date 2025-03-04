@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import LayoutTable from "./layout/Table";
 import { Box } from "@mui/material";
-import { getUserIdFromCookies } from "../../utils/extensions";
-import { getUserListings } from "../../services/component";
 
-const listing = ({ userListings }) => {
+const listing = ({ userListings, setRender }) => {
   const [loading, setLoading] = useState(false);
 
   const columnItems = [
@@ -39,6 +37,7 @@ const listing = ({ userListings }) => {
             loading={loading}
             rows={userListings}
             columns={columnItems}
+            setRender={setRender}
           />
         </Box>
       </Box>
