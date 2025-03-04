@@ -343,7 +343,7 @@ const Main: React.FC = () => {
               </Box>
               <Box
                 onClick={() => {
-                  navigate("/listing");
+                  navigate("/");
                 }}
                 sx={{
                   display: "flex",
