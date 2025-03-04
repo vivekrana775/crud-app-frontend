@@ -7,7 +7,7 @@ export const createList = async (data: any) => {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: `${HOST_NAME}/saved-list`,
+      url: `${HOST_NAME}/user-item`,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${Cookies.get("jstoken")}`,
@@ -30,7 +30,7 @@ export const updateList = async (data: any) => {
     let config = {
       method: "patch",
       maxBodyLength: Infinity,
-      url: `${HOST_NAME}/saved-list`,
+      url: `${HOST_NAME}/user-item`,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${Cookies.get("jstoken")}`,
@@ -54,7 +54,7 @@ export const deleteListById = async (data: any) => {
     let config = {
       method: "delete",
       maxBodyLength: Infinity,
-      url: `${HOST_NAME}/saved-list`,
+      url: `${HOST_NAME}/user-item`,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${Cookies.get("jstoken")}`,
@@ -78,7 +78,7 @@ export const updateListById = async (data: any) => {
     let config = {
       method: "patch",
       maxBodyLength: Infinity,
-      url: `${HOST_NAME}/saved-list`,
+      url: `${HOST_NAME}/user-item`,
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${Cookies.get("jstoken")}`,
@@ -102,7 +102,7 @@ export const getUserListings = (filters?: any) => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: `${HOST_NAME}/saved-list/${filters?.userId}`,
+      url: `${HOST_NAME}/user-item/${filters?.userId}`,
       headers: {
         Authorization: `Bearer ${Cookies.get("jstoken")}`,
         "Content-Type": "application/json",
