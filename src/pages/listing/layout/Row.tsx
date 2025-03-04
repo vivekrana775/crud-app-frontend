@@ -10,7 +10,10 @@ import { useNavigate } from "react-router-dom";
 import { ImageContainer } from "../../../shared/components/ImageContainer";
 import { EditIcon, TrashIcon } from "../../../assets/icons/icons";
 import { toastError, toastSuccess } from "../../../utils/ToastMessage";
-import { deleteListById, updateList } from "../../../services/component";
+import {
+  deleteUserItemById,
+  updateUserItem,
+} from "../../../services/component";
 import { getFormattedDateFull } from "../../../utils/extensions";
 import AddListPopup from "../../../components/AddList";
 
@@ -35,7 +38,7 @@ const Row: React.FC<TableRowProps> = ({
   const handleDeleteListing = async (e: React.MouseEvent) => {
     e.stopPropagation();
     try {
-      deleteListById({ listId: row.id })
+      deleteUserItemById({ listId: row.id })
         .then(() => {
           setRender((prev) => !prev);
           toastSuccess("Deleted Successfully");
@@ -72,7 +75,7 @@ const Row: React.FC<TableRowProps> = ({
       return;
     }
 
-    await updateList(data)
+    await updateUserItem(data)
       .then(() => {
         row.title = data?.title;
         row.description = data?.description;

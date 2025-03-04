@@ -12,7 +12,7 @@ import Seperator2 from "../../shared/components/Seperator2";
 import { colors } from "../../utils/colors";
 import { ButtonPrimary } from "../../shared/components/button/Buttons";
 import AddListPopup from "../../components/AddList";
-import { createList, getUserListings } from "../../services/component";
+import { createUserItem, getUserItems } from "../../services/component";
 import { getUserIdFromCookies } from "../../utils/extensions";
 import { toastError, toastSuccess } from "../../utils/ToastMessage";
 import Listing from "../listing/listing";
@@ -33,7 +33,7 @@ const Home = (props: Props) => {
       return;
     }
 
-    await createList({ ...data, userId })
+    await createUserItem({ ...data, userId })
       .then(() => {
         setIsActiveAddListPopup(false);
         toastSuccess("Success", "Successfully added the list.");
@@ -45,7 +45,7 @@ const Home = (props: Props) => {
   };
 
   const fetchUserListings = async () => {
-    await getUserListings({ userId })
+    await getUserItems({ userId })
       .then((res: any) => {
         setUserListings(res);
       })

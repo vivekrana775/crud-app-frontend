@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { HOST_NAME } from "../utils/constants";
 
-export const createList = async (data: any) => {
+export const createUserItem = async (data: any) => {
   return new Promise((resolve, reject) => {
     let config = {
       method: "post",
@@ -25,7 +25,7 @@ export const createList = async (data: any) => {
       });
   });
 };
-export const updateList = async (data: any) => {
+export const updateUserItem = async (data: any) => {
   return new Promise((resolve, reject) => {
     let config = {
       method: "patch",
@@ -49,7 +49,7 @@ export const updateList = async (data: any) => {
   });
 };
 
-export const deleteListById = async (data: any) => {
+export const deleteUserItemById = async (data: any) => {
   return new Promise((resolve, reject) => {
     let config = {
       method: "delete",
@@ -73,31 +73,7 @@ export const deleteListById = async (data: any) => {
   });
 };
 
-export const updateListById = async (data: any) => {
-  return new Promise((resolve, reject) => {
-    let config = {
-      method: "patch",
-      maxBodyLength: Infinity,
-      url: `${HOST_NAME}/user-item`,
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${Cookies.get("jstoken")}`,
-      },
-      data: data,
-    };
-
-    axios
-      .request(config)
-      .then((response) => {
-        resolve(response?.data?.data);
-      })
-      .catch((error: any) => {
-        reject(error);
-      });
-  });
-};
-
-export const getUserListings = (filters?: any) => {
+export const getUserItems = (filters?: any) => {
   return new Promise<any>((resolve, reject) => {
     let config = {
       method: "get",
