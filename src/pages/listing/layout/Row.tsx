@@ -77,6 +77,7 @@ const Row: React.FC<TableRowProps> = ({
 
     if (!data?.title) {
       toastError("Failed", "Please provide title.");
+      return;
     }
 
     await updateUserItem(data)

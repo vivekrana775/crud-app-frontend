@@ -35,6 +35,7 @@ const Home = (props: Props) => {
 
     if (!data?.title) {
       toastError("Failed", "Please provide the title.");
+      return;
     }
 
     await createUserItem({ ...data, userId })
