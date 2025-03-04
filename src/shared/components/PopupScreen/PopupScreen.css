@@ -1,0 +1,127 @@
+.dialog-wrapper:focus{
+    outline: none !important;
+    border: none !important;
+}
+
+.dialog-wrapper{
+    outline: 0 !important;
+    border: none !important;
+    position: relative;
+}
+
+.dialog-container{
+        position: absolute;
+        top: 0%;
+        left: 25%;
+        right: 25%;
+        /* bottom: 50%; */
+        height: 476px;
+        width: 476px;
+        background-color: white;
+        border: none !important;
+        /* padding: 195px 53px 195px 53px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* align-items: center; */
+        /* gap: 44px; */
+        border-radius: 8px;
+}
+
+.dialog-content-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px
+}
+
+.thumb-image{
+    width: 166px;
+    height: 164px;
+}
+
+.dialog-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.dialog-title{
+    font-size: 34px;
+}
+
+.dialog-desc{
+    font-size: 24px;
+}
+
+.dialog-button{
+    padding: 16px 33px;
+    background-color: #0E2E47;
+}
+
+.dialog-button-text{
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+}
+
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop{
+    opacity: 0.2;
+}
+
+@media only screen and (max-width: 1700px){
+    .dialog-container{
+        padding: 150px 53px 150px 53px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .dialog-container{
+       left: 100px;
+       right: 100px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .dialog-container{
+       left: 50px;
+       right: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .dialog-container{
+       padding: 100px 53px 100px 53px;
+    }
+    .thumb-image{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .dialog-container{
+       left: 24px;
+       right: 24px;
+       padding: 50px 24px 50px 24px;
+    }
+
+    .dialog-button{
+        padding: 10px 33px;
+    }
+    
+    .dialog-button-text{
+        font-size: 12px;
+    }
+
+    .dialog-title{
+        font-size: 16px;
+    }
+    
+    .dialog-desc{
+        font-size: 16px;
+    }
+    
+}

@@ -1,0 +1,202 @@
+/* Styles for autofill */
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6) !important;
+  -webkit-background-clip: padding-box !important;
+  caret-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  /* border: 1px solid #3D3D3D !important; */
+}
+
+#accountSettingInputCurrentPassword {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+#accountSettingInputCurrentPassword:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #272727 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  caret-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+#newsletterInput:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important; /* Background color */
+  -webkit-text-fill-color: #ffffff !important; /* Text color */
+  border: 1px solid #3d3d3d !important; /* Border */
+}
+#SidebarNewsLetterInput:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #282828 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border: 1px solid #3d3d3d !important;
+}
+
+#footerEmailInput:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important; /* Background color */
+  -webkit-text-fill-color: #ffffff !important; /* Text color */
+  border: 1px solid #3d3d3d !important; /* Border */
+}
+
+#lastNameInputAccountSetting:-webkit-autofill,
+#lastNameInputAccountSetting:-ms-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #272727 inset !important; /* Background color */
+  -webkit-text-fill-color: #939393 !important; /* Text color */
+  border: 1px solid #3d3d3d !important; /* Border */
+}
+
+/* Firefox */
+input:-moz-autofill {
+  box-shadow: 0 0 0 1000px #1b1b1b inset !important; /* Background color */
+  -moz-text-fill-color: #ffffff80 !important; /* Text color */
+  border: 1px solid #3d3d3d !important; /* Border */
+}
+
+/* Edge */
+input:-ms-autofill {
+  box-shadow: 0 0 0 1000px #1b1b1b inset !important; /* Background color */
+  -ms-text-fill-color: #ffffff80 !important; /* Text color */
+}
+#SignupInputFields {
+  font-size: 16px !important;
+}
+#SignupInputFields:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+  font-size: 16px !important;
+}
+#SignupInputFields:focus {
+  font-size: 16px !important;
+}
+#SignupInputFields:-ms-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+  font-size: 16px !important;
+}
+#LoginInputFields {
+  font-size: 16px !important;
+}
+#LoginInputFields:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+  font-size: 16px !important;
+}
+#LoginInputFields:focus {
+  font-size: 16px !important;
+}
+#LoginInputFields:-ms-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+#resetPasswordPageInputs:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+#resetPasswordPageInputs:-ms-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+
+#loginPopupinputFields:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+#loginPopupinputFields:-ms-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+
+#signupPopupinputsFields:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+#signupPopupinputsFields:-ms-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+#requestResetPasswordPopupInput:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+#requestResetPasswordPopupInput:-ms-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+#DeleteAccountUIInput:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #272727 inset !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+#DeleteAccountUIInput:-ms-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #272727 inset !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  -webkit-background-clip: padding-box !important;
+  border: 1px solid #3d3d3d !important;
+}
+
+input::placeholder {
+  color: #ffffff80;
+}
+
+/* use this for Stop background scroll while any popup open  */
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+body.no-scroll,
+html.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -100;
+}
+
+@media (max-width: 600px) {
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+
+  .responsive-input {
+    font-size: 14px !important;
+  }
+}
