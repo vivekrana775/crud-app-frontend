@@ -4,7 +4,7 @@ export let HOST_NAME: any = "http://localhost:8001";
 
 //@ts-ignore
 if (isActiveLocalHost === false) {
-  HOST_NAME = "https://crud-app-fronted.vercel.app";
+  HOST_NAME = "https://crud-app-backend-seven.vercel.app";
 }
 
 // container min height
