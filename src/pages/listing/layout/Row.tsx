@@ -38,7 +38,7 @@ const Row: React.FC<TableRowProps> = ({
   const handleDeleteListing = async (e: React.MouseEvent) => {
     e.stopPropagation();
     try {
-      deleteUserItemById({ listId: row.id })
+      deleteUserItemById({ itemId: row.id })
         .then(() => {
           setRender((prev) => !prev);
           toastSuccess("Deleted Successfully");
@@ -73,6 +73,10 @@ const Row: React.FC<TableRowProps> = ({
     if (!data?.id) {
       toastError("Failed", "Id is not there.");
       return;
+    }
+
+    if (!data?.title) {
+      toastError("Failed", "Please provide title.");
     }
 
     await updateUserItem(data)

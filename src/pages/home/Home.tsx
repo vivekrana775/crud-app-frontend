@@ -33,6 +33,10 @@ const Home = (props: Props) => {
       return;
     }
 
+    if (!data?.title) {
+      toastError("Failed", "Please provide the title.");
+    }
+
     await createUserItem({ ...data, userId })
       .then(() => {
         setIsActiveAddListPopup(false);

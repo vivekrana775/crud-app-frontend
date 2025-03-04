@@ -50,6 +50,7 @@ export const updateUserItem = async (data: any) => {
 };
 
 export const deleteUserItemById = async (data: any) => {
+  console.log("data", data);
   return new Promise((resolve, reject) => {
     let config = {
       method: "delete",
