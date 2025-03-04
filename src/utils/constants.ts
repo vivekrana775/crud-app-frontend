@@ -1,4 +1,4 @@
-const isActiveLocalHost = true;
+const isActiveLocalHost = false;
 
 export let HOST_NAME: any = "http://localhost:8001";
 
